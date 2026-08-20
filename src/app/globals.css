@@ -1,26 +1,28 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme{
+  --color-site-konnectai-100: oklch(0.7053 0.1561 161.26);
+  --color-site-konnectai-200: oklch(0.9061 0.1631 152.86);
+  --color-paleta-konnectai-primary: oklch(0.2511 0.0427 197.31);
+  --color-paleta-konnectai-secondary: oklch(0.7963 0.1747 161.43);
+  --color-paleta-konnectai-terciary: oklch(0.9464 0.0013 286.37);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+h1{
+  @apply text-6xl
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+h2{
+  @apply text-5xl
 }
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+h3{
+  @apply text-4xl
+}
+h4{
+  @apply text-3xl
+}
+h5{
+  @apply text-2xl
+}
+.degradeTextoFundoEscuro{
+  @apply bg-linear-to-r from-paleta-konnectai-secondary to-site-konnectai-200 bg-clip-text text-transparent
 }
