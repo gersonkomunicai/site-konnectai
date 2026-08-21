@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { listOne } from '../../data/listCanais'
 import CardTwo from '../../components/CardTwo'
 import { listThree } from '../../data/listThree'
+import CardEmpresas from '../../components/CardEmpresas'
+import { listTestemonials } from '../../data/listTestemunhos'
 
 export default function Home() {
   return (
@@ -47,7 +49,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='flex items-center py-10 justify-between h-auto container bg-paleta-konnectai-primary'>
+        <div className='flex items-center py-10 justify-between h-auto container '>
           <div className='hidden lg:flex w-150'>
             <Image src={'/2.png'} width={1000} height={1000} alt='imagem de um celular com uma ideia de atendimento possível na Konnectai' ></Image>
           </div>
@@ -80,26 +82,59 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='flex flex-col h-auto bg-paleta-konnectai-primary'>
-          <div className='flex container justify-between'>
-            <Image src={'/14.png'} width={1000} height={1000} alt='moça segurando notebook quebrando a quarta parede' className='hidden lg:flex w-180 ' />
-            <div className='flex flex-col max-w-3xl gap-3'>
-              <h3 className='degradeTextoFundoEscuro font-medium '>Porque escolher a Konnectaí</h3>
-              <div className='flex flex-col divide-y divide-paleta-konnectai-secondary lg:max-w-3xl'>
-                {listThree.map((item) => (
-                  <div key={item.id} className='flex p-5 items-center justify-between gap-3'>
-                    <Image src={`/listThree/${item.image}.png`} width={50} height={50} alt='icone' className='' />
-                    <p className='text-lg text-center w-full text-paleta-konnectai-terciary'>{item.title}</p>
+        <div className='flex-flex-col container'>
+          <div className='w-150 h-150 bg-paleta-konnectai-terciary/20 absolute blur-3xl rounded-full'></div>
+          <div className='flex flex-col items-center py-10 h-auto '>
+            <div className='flex container justify-between'>
+              <Image src={'/14.png'} width={1000} height={1000} alt='moça segurando notebook quebrando a quarta parede' className='hidden relative lg:flex w-180 ' />
+              <div className='flex flex-col w-full gap-3'>
+                <h3 className='degradeTextoFundoEscuro font-medium text-center'>Porque escolher a Konnectaí</h3>
+                <div className='flex flex-col divide-y divide-paleta-konnectai-secondary '>
+                  {listThree.map((item) => (
+                    <div key={item.id} className='flex p-5 items-center justify-between gap-3'>
+                      <Image src={`/listThree/${item.image}.png`} width={50} height={50} alt='icone' className='' />
+                      <p className='text-lg text-center w-full text-paleta-konnectai-terciary'>{item.title}</p>
+                    </div>
+                  ))}
+                  <div className='p-3 mt-10 w-full flex justify-center'>
+                    <a href='' className='p-3 font-medium text-lg bg-linear-to-r rounded-full from-paleta-konnectai-secondary to-paleta-konnectai-terciary'>
+                      Quero falar com um especialista
+                    </a>
                   </div>
-                ))}
-                
+                </div>
               </div>
-
             </div>
-
-
           </div>
-
+        </div>
+        <div className='flex w-full container justify-center py-10 items-center'>
+          <div className='flex flex-col lg:items-start items-center justify-center lg:text-start text-center max-w-lg gap-6'>
+            <h2 className='degradeTextoFundoEscuro font-medium py-2'>Seja omnichannel</h2>
+            <span className='text-xl text-paleta-konnectai-terciary'>Com as soluções da Konnectaí, seu negócio fica presente em todos os canais, 24 horas por dia, permitindo que seus clientes falem com você onde preferirem, a qualquer momento.</span>
+            <span className='text-xl text-paleta-konnectai-terciary'>Como provedora oficial do Grupo Meta, garantimos segurança, estabilidade e qualidade nos atendimentos via WhatsApp, Instagram e Facebook  tudo integrado para oferecer uma experiência rápida, profissional e sem complicações.</span>
+            <a href="" className='flex justify-center rounded-full text-lg font-medium degradeClaro w-full lg:max-w-xs p-3'>Fale Conosco</a>
+          </div>
+          <div className='hidden lg:flex'>
+            <Image src={'/15.png'} width={1000} height={1000} alt='' className='w-200' />
+          </div>
+        </div>
+        <div className='flex flex-col container w-full items-center h-auto gap-15 py-10'>
+          <div className='flex flex-col gap-5 items-center max-w-3xl text-center'>
+            <h5 className='text-paleta-konnectai-terciary'>Quem confia na Konnectaí</h5>
+            <h2 className='degradeTextoFundoEscuro font-medium'>Empresas que já transformaram seu atendimento</h2>
+            <span className='text-lg text-paleta-konnectai-terciary'>Empresas de diversos segmentos já confiam na Konnectaí para otimizar seus resultados:</span>
+          </div>
+          <CardEmpresas />
+        </div>
+        <div id="testemunhos" className='flex flex-col text-center container w-full items-center justify-center py-10'>
+          <h3 className='text-paleta-konnectai-terciary'>Resultados que falam por si</h3>
+          <h2 className='degradeTextoFundoEscuro'>Depoimentos reais <span className='text-paleta-konnectai-terciary'>de quem confia na </span> Konnectaí</h2>
+          <div className='flex flex-wrap container justify-center items-center'>
+            {listTestemonials.map((item) => (
+              <div key={item.id} className='items-center'>
+                <Image src={item.image} width={340} height={100} alt='testemunhos ' className=''/>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

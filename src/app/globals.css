@@ -26,3 +26,7 @@ h5{
 .degradeTextoFundoEscuro{
   @apply bg-linear-to-r from-paleta-konnectai-secondary to-site-konnectai-200 bg-clip-text text-transparent
 }
+
+.degradeClaro{
+  @apply bg-linear-to-r from-paleta-konnectai-secondary to-paleta-konnectai-terciary
+}
