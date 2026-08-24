@@ -6,6 +6,8 @@ import CardTwo from '../../components/CardTwo'
 import { listThree } from '../../data/listThree'
 import CardEmpresas from '../../components/CardEmpresas'
 import { listTestemonials } from '../../data/listTestemunhos'
+import { listSix } from '../../data/listSix'
+import { listSeven } from '../../data/listSeven'
 
 export default function Home() {
   return (
@@ -131,9 +133,59 @@ export default function Home() {
           <div className='flex flex-wrap container justify-center items-center'>
             {listTestemonials.map((item) => (
               <div key={item.id} className='items-center'>
-                <Image src={item.image} width={340} height={100} alt='testemunhos ' className=''/>
+                <Image src={item.image} width={340} height={100} alt='testemunhos' className='' />
               </div>
             ))}
+          </div>
+        </div>
+        <div className='flex items-center'>
+          <div className='flex flex-col max-w-xl text-center lg:text-start items-center lg:items-start gap-3'>
+            <h2 className='font-medium degradeTextoFundoEscuro py-2'>Gerencie com inteligência</h2>
+            <p className='text-paleta-konnectai-terciary'>Tenha em um só lugar as ferramentas essenciais para planejar, acompanhar e evoluir o seu negócio. Conecte-se aos sistemas que você já utiliza e crie uma operação integrada, eficiente e muito mais produtiva.</p>
+            <div className='flex flex-col text-paleta-konnectai-terciary'>
+              {listSix.map((item) => (
+                <div key={item.id} className='flex items-center py-3 gap-4'>
+                  <item.icon className='shrink-0 w-9 h-9' />
+                  <p className='text-lg'>{item.title}</p>
+                </div>
+              ))}
+            </div>
+            <a className='flex items-center justify-center rounded-full font-medium p-3  bg-linear-to-r from-paleta-konnectai-secondary to-paleta-konnectai-terciary' href="#">
+              Começar agora
+            </a>
+          </div>
+          <div>
+            <Image src={'/16.png'} width={1000} height={1000} alt='casal olhando para a tela do celular' className='hidden lg:flex lg:w-180' />
+          </div>
+        </div>
+        <div className='flex flex-col container py-10'>
+          <div className='flex w-full h-auto items-center justify-evenly'>
+            <div className='hidden lg:flex items-start justify-center w-140 h-100 '>
+              <Image src={'/17.png'} width={1000} height={100} alt='' className='w-120' />
+            </div>
+            <div className='flex text-paleta-konnectai-terciary flex-col max-w-xl gap-4'>
+              <h2>Segurança & Confiança</h2>
+              <p className='text-lg font-medium'>Sua operação merece tecnologia sólida, processos seguros e uma plataforma preparada para proteger dados e garantir estabilidade. Trabalhamos com padrões rigorosos de segurança e monitoramento contínuo para que seu atendimento funcione com confiabilidade, desempenho e total tranquilidade.</p>
+            </div>
+          </div>
+          <div className='flex'>
+            <div className='flex flex-col justify-center p-5 gap-5 w-full '>
+              {listSeven.map((item) => (
+                <div className='flex flex-col items-start gap-2 max-w-xl'>
+                  <div className='flex items-center gap-3'>
+                    <item.icon className='shrink-0 bg-paleta-konnectai-primary/80 text-paleta-konnectai-secondary rounded-lg shadow-xl/30 p-3 w-13 h-13' />
+                    <div className='flex flex-col border-b border-paleta-konnectai-secondary'>
+                      <p className='uppercase text-xl text-paleta-konnectai-terciary font-bold'>{item.title}</p>
+                      <p className='text-lg text-paleta-konnectai-terciary'>{item.subtitle}</p>
+                    </div>
+                  </div>
+
+                </div>
+              ))}
+            </div>
+            <div className=''>
+
+            </div>
           </div>
         </div>
       </div>
