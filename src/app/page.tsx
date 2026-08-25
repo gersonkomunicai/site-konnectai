@@ -8,6 +8,18 @@ import CardEmpresas from '../../components/CardEmpresas'
 import { listTestemonials } from '../../data/listTestemunhos'
 import { listSix } from '../../data/listSix'
 import { listSeven } from '../../data/listSeven'
+import { BsHeadset } from 'react-icons/bs'
+import { LuArrowRight, LuHeadset, LuUser } from 'react-icons/lu'
+import { PiHeadsetLight } from 'react-icons/pi'
+import { listEight } from '../../data/listEight'
+import { listEmpresas2 } from '../../data/listEmpresas2'
+import CardBeneficios from '../../components/CardBeneficios'
+import { listDuvidas } from '../../data/listDuvidas'
+import { ImOffice } from 'react-icons/im'
+import { MdOutlineAlternateEmail } from 'react-icons/md'
+import { CgSmartphone } from 'react-icons/cg'
+import { GiWorld } from 'react-icons/gi'
+import FormCta from '../../components/FormCta'
 
 export default function Home() {
   return (
@@ -139,7 +151,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex items-center'>
-          <div className='flex flex-col max-w-xl text-center lg:text-start items-center lg:items-start gap-3'>
+          <div className='flex flex-col lg:max-w-xl text-center lg:text-start items-center lg:items-start gap-3'>
             <h2 className='font-medium degradeTextoFundoEscuro py-2'>Gerencie com inteligência</h2>
             <p className='text-paleta-konnectai-terciary'>Tenha em um só lugar as ferramentas essenciais para planejar, acompanhar e evoluir o seu negócio. Conecte-se aos sistemas que você já utiliza e crie uma operação integrada, eficiente e muito mais produtiva.</p>
             <div className='flex flex-col text-paleta-konnectai-terciary'>
@@ -150,7 +162,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <a className='flex items-center justify-center rounded-full font-medium p-3  bg-linear-to-r from-paleta-konnectai-secondary to-paleta-konnectai-terciary' href="#">
+            <a className='flex items-center justify-center rounded-full font-medium p-3 bg-linear-to-r from-paleta-konnectai-secondary to-paleta-konnectai-terciary w-lg' href="#">
               Começar agora
             </a>
           </div>
@@ -158,34 +170,112 @@ export default function Home() {
             <Image src={'/16.png'} width={1000} height={1000} alt='casal olhando para a tela do celular' className='hidden lg:flex lg:w-180' />
           </div>
         </div>
-        <div className='flex flex-col container py-10'>
-          <div className='flex w-full h-auto items-center justify-evenly'>
-            <div className='hidden lg:flex items-start justify-center w-140 h-100 '>
-              <Image src={'/17.png'} width={1000} height={100} alt='' className='w-120' />
-            </div>
-            <div className='flex text-paleta-konnectai-terciary flex-col max-w-xl gap-4'>
-              <h2>Segurança & Confiança</h2>
-              <p className='text-lg font-medium'>Sua operação merece tecnologia sólida, processos seguros e uma plataforma preparada para proteger dados e garantir estabilidade. Trabalhamos com padrões rigorosos de segurança e monitoramento contínuo para que seu atendimento funcione com confiabilidade, desempenho e total tranquilidade.</p>
-            </div>
+        <div className='flex flex-col items-center container gap-6 py-10'>
+          <div className='text-center lg:max-w-4xl'>
+            <h2 className='degradeTextoFundoEscuro py-2 font-bold'>Segurança & Confiança</h2>
+            <p className='text-lg text-paleta-konnectai-terciary  font-medium'>Sua operação merece tecnologia sólida, processos seguros e uma plataforma preparada para proteger dados e garantir estabilidade. Trabalhamos com padrões rigorosos de segurança e monitoramento contínuo para que seu atendimento funcione com confiabilidade, desempenho e total tranquilidade.</p>
           </div>
-          <div className='flex'>
-            <div className='flex flex-col justify-center p-5 gap-5 w-full '>
-              {listSeven.map((item) => (
-                <div className='flex flex-col items-start gap-2 max-w-xl'>
-                  <div className='flex items-center gap-3'>
-                    <item.icon className='shrink-0 bg-paleta-konnectai-primary/80 text-paleta-konnectai-secondary rounded-lg shadow-xl/30 p-3 w-13 h-13' />
-                    <div className='flex flex-col border-b border-paleta-konnectai-secondary'>
-                      <p className='uppercase text-xl text-paleta-konnectai-terciary font-bold'>{item.title}</p>
-                      <p className='text-lg text-paleta-konnectai-terciary'>{item.subtitle}</p>
+          <div className='flex w-full h-auto items-center justify-evenly'>
+            <div className='flex flex-col lg:max-w-xl gap-4'>
+              <div className='flex flex-col justify-center p-5 gap-7 w-full '>
+                {listSeven.map((item) => (
+                  <div key={item.id} className='flex flex-col items-start gap-2 max-w-xl'>
+                    <div className='flex items-center gap-3'>
+                      <item.icon className='shrink-0 shadow-paleta-konnectai-secondary bg-paleta-konnectai-primary/80 text-paleta-konnectai-secondary rounded-lg shadow-xl/30 p-3 w-13 h-13' />
+                      <div className='flex flex-col border-b border-paleta-konnectai-secondary'>
+                        <p className='uppercase text-xl text-paleta-konnectai-terciary font-bold'>{item.title}</p>
+                        <p className='text-lg text-paleta-konnectai-terciary'>{item.subtitle}</p>
+                      </div>
                     </div>
                   </div>
-
+                ))}
+                <a href="" className='flex items-center justify-between gap-3 bg-paleta-konnectai-secondary/80 border rounded-xl border-paleta-konnectai-secondary shadow-xl/30 shadow-paleta-konnectai-secondary p-2'>
+                  <div className='flex items-center gap-3'>
+                    <PiHeadsetLight className='shrink-0 w-15 h-15 bg-linear-to-b from-paleta-konnectai-terciary rounded-md to-paleta-konnectai-secondary/50 p-2 text-paleta-konnectai-primary' />
+                    <div className='flex text-paleta-konnectai-terciary flex-col'>
+                      <span className='text-lg font-medium'>Fale com um especialista</span>
+                      <span className='text-sm'>Entenda como podemos ajudar seu negócio</span>
+                    </div>
+                  </div>
+                  <LuArrowRight className='shrink-0 w-6 h-6 text-paleta-konnectai-terciary' />
+                </a>
+              </div>
+            </div>
+            <div className='hidden lg:flex items-start justify-center w-140 h-100 '>
+              <Image src={'/cta.png'} width={1000} height={100} alt='' className='w-120 rounded-xl' />
+            </div>
+          </div>
+        </div>
+        <div className='flex flex-col gap-20 items-center bg-paleta-konnectai-terciary py-10'>
+          <div className='max-w-4xl text-center'>
+            <h2 className='degradeTextoFundoClaro py-2 font-medium'>Uma plataforma que se adpata ao <span className='font-bold'>tamanho</span> do seu negócio</h2>
+          </div>
+          <div className='rounded-md flex justify-center flex-wrap'>
+            {listEight.map((item) => (
+              <div key={item.id} className='flex '>
+                <Image src={item.image} width={1000} height={1000} alt='' className='w-120 ' />
+              </div>
+            ))}
+          </div>
+          <a href="" className='flex justify-center p-3 text-lg font-medium text-paleta-konnectai-terciary degradeEscuro w-sm rounded-full'>
+            Fale com o nosso time
+          </a>
+          <div className='flex flex-col items-center gap-10'>
+            <h4 className='text-center'>Nossa API Oficial permite integrações rápidas com diversas ferramentas</h4>
+            <h2 className='font-medium max-w-2xl text-center'>Compatível com as Principais Plataformas do Mercado.</h2>
+            <div className='max-w-6xl flex flex-wrap items-center justify-center gap-2'>
+              {listEmpresas2.map((item) => (
+                <div key={item.id} className='flex items-center justify-center w-55 h-35 rounded-xl bg-paleta-konnectai-secondary'>
+                  <Image src={item.image} width={140} height={1} alt='' />
                 </div>
               ))}
             </div>
-            <div className=''>
-
+            <a href="" className='flex items-center justify-center rounded-full font-medium text-lg text-paleta-konnectai-terciary w-md p-3 degradeEscuro'>Conectar meus canais</a>
+          </div>
+          <div className='flex flex-col items-center text-center gap-5 lg:py-20'>
+            <h2 className='degradeTextoFundoClaro font-bold'>Benefícios da Konnectaí</h2>
+            <CardBeneficios />
+            <a href="" className='flex w-sm p-3 items-center justify-center text-paleta-konnectai-terciary text-xl degradeEscuro rounded-full'>Falar com um especialista</a>
+          </div>
+        </div>
+        <div className='flex flex-col py-18'>
+          <div className='flex gap-6 flex-wrap'>
+            <div className=' degradeTextoFundoEscuro flex flex-col max-w-sm items-center text-center'>
+              <h1>95%</h1>
+              <h5>Satisfação dos Clientes</h5>
             </div>
+            <div className='flex flex-col max-w-sm degradeTextoFundoEscuro items-center text-center'>
+              <h1>+10.000</h1>
+              <h5>Usuários Simultâneos</h5>
+            </div>
+            <div className='flex flex-col max-w-sm items-center text-center  degradeTextoFundoEscuro'>
+              <h1>+5 Milhões</h1>
+              <h5>Mensagens processadas por mês</h5>
+            </div>
+            <div className='flex flex-col max-w-sm items-center text-center  degradeTextoFundoEscuro'>
+              <h1>+300</h1>
+              <h5>Empresas Atendidas</h5>
+            </div>
+          </div>
+        </div>
+        <div className='flex flex-col container'>
+          <div className='flex flex-col items-center gap-3 justify-center '>
+            <h1 className='text-paleta-konnectai-terciary'>Principais dúvidas sobre a</h1>
+            <Image src={'/konnectai_logo_verde.png'} width={1000} height={1000} alt='' className='w-80 max-w-80' />
+            <div className='flex flex-col max-w-6xl shadow-xl/80 shadow-paleta-konnectai-secondary gap-5 bg-paleta-konnectai-terciary rounded-xl divide-y divide-gray-400'>
+              {listDuvidas.map((item) => (
+                <div key={item.id} className='p-6'>
+                  <p className='text-paleta-konnectai-primary font-bold text-lg'>{item.title}</p>
+                  <span className=''>{item.subtitle}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className='flex items-center justify-center py-20'>
+          <div className='flex flex-col gap-5 text-paleta-konnectai-terciary max-w-xl'>
+            <h2 className='text-center'>Pronto para transformar sua comunicação?</h2>
+            <FormCta></FormCta>
           </div>
         </div>
       </div>
