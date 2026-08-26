@@ -44,6 +44,10 @@ export default function FormCta() {
                 <input type="checkbox" name="checkSite" onClick={() => { setSite(!site) }} />
                 <label >Não tenho site</label>
             </div>
+            <div className="w-full p-3 bg-paleta-konnectai-secondary font-medium text-paleta-konnectai-primary rounded-full flex justify-center">
+                <span>Solicitar atendimento</span>
+
+            </div>
         </div>
     )
 }

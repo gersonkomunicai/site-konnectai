@@ -20,6 +20,7 @@ import { MdOutlineAlternateEmail } from 'react-icons/md'
 import { CgSmartphone } from 'react-icons/cg'
 import { GiWorld } from 'react-icons/gi'
 import FormCta from '../../components/FormCta'
+import Footer from '../../components/Footer'
 
 export default function Home() {
   return (
@@ -64,7 +65,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex items-center py-10 justify-between h-auto container '>
-          <div className='hidden lg:flex w-150'>
+          <div className='hidden lg:flex'>
             <Image src={'/2.png'} width={1000} height={1000} alt='imagem de um celular com uma ideia de atendimento possível na Konnectai' ></Image>
           </div>
           <div className='flex flex-col lg:max-w-2xl'>
@@ -97,10 +98,9 @@ export default function Home() {
           </div>
         </div>
         <div className='flex-flex-col container'>
-          <div className='w-150 h-150 bg-paleta-konnectai-terciary/20 absolute blur-3xl rounded-full'></div>
           <div className='flex flex-col items-center py-10 h-auto '>
             <div className='flex container justify-between'>
-              <Image src={'/14.png'} width={1000} height={1000} alt='moça segurando notebook quebrando a quarta parede' className='hidden relative lg:flex w-180 ' />
+              <Image src={'/14.png'} width={1000} height={1000} alt='moça segurando notebook quebrando a quarta parede' className='hidden relative lg:flex ' />
               <div className='flex flex-col w-full gap-3'>
                 <h3 className='degradeTextoFundoEscuro font-medium text-center'>Porque escolher a Konnectaí</h3>
                 <div className='flex flex-col divide-y divide-paleta-konnectai-secondary '>
@@ -110,7 +110,7 @@ export default function Home() {
                       <p className='text-lg text-center w-full text-paleta-konnectai-terciary'>{item.title}</p>
                     </div>
                   ))}
-                  <div className='p-3 mt-10 w-full flex justify-center'>
+                  <div className='p-3 mt-10 w-full text-center flex justify-center'>
                     <a href='' className='p-3 font-medium text-lg bg-linear-to-r rounded-full from-paleta-konnectai-secondary to-paleta-konnectai-terciary'>
                       Quero falar com um especialista
                     </a>
@@ -153,7 +153,7 @@ export default function Home() {
         <div className='flex items-center'>
           <div className='flex flex-col lg:max-w-xl text-center lg:text-start items-center lg:items-start gap-3'>
             <h2 className='font-medium degradeTextoFundoEscuro py-2'>Gerencie com inteligência</h2>
-            <p className='text-paleta-konnectai-terciary'>Tenha em um só lugar as ferramentas essenciais para planejar, acompanhar e evoluir o seu negócio. Conecte-se aos sistemas que você já utiliza e crie uma operação integrada, eficiente e muito mais produtiva.</p>
+            <p className='text-paleta-konnectai-terciary max-w-md'>Tenha em um só lugar as ferramentas essenciais para planejar, acompanhar e evoluir o seu negócio. Conecte-se aos sistemas que você já utiliza e crie uma operação integrada, eficiente e muito mais produtiva.</p>
             <div className='flex flex-col text-paleta-konnectai-terciary'>
               {listSix.map((item) => (
                 <div key={item.id} className='flex items-center py-3 gap-4'>
@@ -162,9 +162,11 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <a className='flex items-center justify-center rounded-full font-medium p-3 bg-linear-to-r from-paleta-konnectai-secondary to-paleta-konnectai-terciary w-lg' href="#">
+
+            <a className='flex items-center justify-center rounded-full font-medium p-3 bg-linear-to-r from-paleta-konnectai-secondary to-paleta-konnectai-terciary max-w-lg' href="#">
               Começar agora
             </a>
+
           </div>
           <div>
             <Image src={'/16.png'} width={1000} height={1000} alt='casal olhando para a tela do celular' className='hidden lg:flex lg:w-180' />
@@ -273,12 +275,16 @@ export default function Home() {
           </div>
         </div>
         <div className='flex items-center justify-center py-20'>
-          <div className='flex flex-col gap-5 text-paleta-konnectai-terciary max-w-xl'>
+          <div className='flex flex-col gap-5 text-paleta-konnectai-terciary max-w-2xl'>
             <h2 className='text-center'>Pronto para transformar sua comunicação?</h2>
             <FormCta></FormCta>
           </div>
+          <Image src={'/21.png'} width={900} height={900} alt='' className='hidden lg:flex'/>
         </div>
       </div>
+      <footer className='w-full h-auto bg-paleta-konnectai-forth'>
+        <Footer />
+      </footer>
     </div>
   )
 }
