@@ -42,7 +42,7 @@ export default function FormCta() {
             </div>
             <div className="flex items-center gap-2">
                 <input type="checkbox" name="checkSite" onClick={() => { setSite(!site) }} />
-                <label >Não tenho site*</label>
+                <label >Não tenho site</label>
             </div>
         </div>
     )

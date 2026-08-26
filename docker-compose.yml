@@ -1,0 +1,20 @@
+services:
+  app:
+    build: 
+      context: .
+    container_name: konnectai-front
+    restart: unless-stopped
+    environment:
+      - HOSTNAME=0.0.0.0
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik_network"
+      - "traefik.http.routers.konnectai-front.rule=Host(`konnectai.com.br`) || Host(`www.konnectai.com.br`)"
+      - "traefik.http.routers.konnectai-front.entrypoints=websecure"
+      - "traefik.http.routers.konnectai-front.tls.certresolver=letsencrypt"
+      - "traefik.http.services.konnectai-front.loadbalancer.server.port=3000"
+    networks:
+      - traefik_network
+networks:
+  traefik_network:
+    external: true
