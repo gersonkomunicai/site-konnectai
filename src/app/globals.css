@@ -32,8 +32,12 @@ h5{
 }
 
 .degradeClaro{
-  @apply bg-linear-to-r from-paleta-konnectai-forth to-paleta-konnectai-secondary text-paleta-konnectai-primary 
+  @apply bg-linear-to-r from-paleta-konnectai-forth to-paleta-konnectai-secondary font-medium text-paleta-konnectai-primary 
 }
 .degradeEscuro{
   @apply bg-linear-to-r from-paleta-konnectai-primary to-paleta-konnectai-secondary 
+}
+
+.navbarHover{
+  @apply hover:text-paleta-konnectai-secondary transition-all ease-in duration-200
 }

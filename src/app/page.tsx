@@ -8,36 +8,33 @@ import CardEmpresas from '../../components/CardEmpresas'
 import { listTestemonials } from '../../data/listTestemunhos'
 import { listSix } from '../../data/listSix'
 import { listSeven } from '../../data/listSeven'
-import { BsHeadset } from 'react-icons/bs'
-import { LuArrowRight, LuHeadset, LuUser } from 'react-icons/lu'
+import { LuArrowRight } from 'react-icons/lu'
 import { PiHeadsetLight } from 'react-icons/pi'
 import { listEight } from '../../data/listEight'
 import { listEmpresas2 } from '../../data/listEmpresas2'
 import CardBeneficios from '../../components/CardBeneficios'
 import { listDuvidas } from '../../data/listDuvidas'
-import { ImOffice } from 'react-icons/im'
-import { MdOutlineAlternateEmail } from 'react-icons/md'
-import { CgSmartphone } from 'react-icons/cg'
-import { GiWorld } from 'react-icons/gi'
+
 import FormCta from '../../components/FormCta'
 import Footer from '../../components/Footer'
 
 export default function Home() {
   return (
     <div className='flex flex-col justify-center items-center'>
-      <Navbar className='absolute top-0 border-b border-paleta-konnectai-primary' />
-      <div className='w-full bg-[url("/heromint.png")] bg-cover bg-no-repeat bg-center'>
+      <Navbar className='absolute top-0 border-b border-paleta-konnectai-terciary' />
+      <div className='w-full bg-[url("/hero2.png")] bg-cover bg-no-repeat bg-center'>
+        <div className='bg-paleta-konnectai-primary' />
         <div className='flex flex-col justify-center items-center w-full h-screen '>
           <div className='h-full container flex flex-col justify-center items-center text-center gap-10 '>
-            <h1 className='text-paleta-konnectai-primary p-2 font-medium'>Transforme seu WhatsApp em um canal inteligente de vendas e atendimento.</h1>
+            <h1 className='text-paleta-konnectai-terciary p-2 font-medium'>Transforme seu WhatsApp em um canal inteligente de vendas e atendimento.</h1>
             <div className='flex flex-col text-center justify-center items-center gap-5'>
-              <p className='text-paleta-konnectai-primary text-lg'>A Konnectai Conversas usa IA treinada no seu negócio para responder, qualificar leads e organizar atendimentos automaticamente tudo via API Oficial do WhatsApp.</p>
+              <p className='text-paleta-konnectai-forth text-lg'>A Konnectai Conversas usa IA treinada no seu negócio para responder, qualificar leads e organizar atendimentos automaticamente tudo via API Oficial do WhatsApp.</p>
               <div className='lg:flex flex-col items-center w-full gap-2'>
-                <a href='#' className='flex items-center lg:mb-0 mb-5 text-md text-paleta-konnectai-terciary justify-center gap-2 p-2 rounded-full min-w-sm bg-paleta-konnectai-primary'>
+                <a href='#' className='flex items-center lg:mb-0 mb-5 text-md text-paleta-konnectai-primary justify-center gap-2 p-2 rounded-full min-w-sm bg-paleta-konnectai-forth'>
                   <FaWhatsapp className='shrink-0 w-4 h-4' />
                   <span className='font-medium'>Fale Conosco</span>
                 </a>
-                <a href='#title' className='flex items-center justify-center text-md gap-2 p-2 bg-paleta-konnectai-primary text-paleta-konnectai-terciary font-medium rounded-full min-w-sm'>
+                <a href='#title' className='flex items-center justify-center text-md gap-2 p-2 bg-paleta-konnectai-forth text-paleta-konnectai-primary font-medium rounded-full min-w-sm'>
                   <span>Ver como funciona</span>
                 </a>
               </div>
@@ -45,26 +42,32 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='flex flex-col justify-center items-center bg-paleta-konnectai-primary w-full h-auto p-10'>
+      <div className='bg-paleta-konnectai-primary' />
+      <div className='w-full flex items-center justify-center bg-paleta-konnectai-terciary'>
         <div className='flex container items-center justify-center lg:text-left text-center lg:justify-between'>
-          <div className='flex flex-col items-center lg:items-start max-w-3xl gap-10'>
-            <div id='title'>
-              <h2 className='font-bold text-paleta-konnectai-terciary'>Descomplique seu atendimento.</h2>
-              <h3 className='font-medium text-paleta-konnectai-forth'>Automatize suas vendas.</h3>
+          <div className='w-96 h-96 rounded-full absolute mt-60 left-10 bg-paleta-konnectai-forth/15 blur-3xl' />
+          <div className='hidden lg:flex w-20 h-20 mt-10 left-200 rotate-45 absolute bg-paleta-konnectai-forth/20 blur-3xl ' />
+          <div className='hidden lg:flex w-50 h-50 rounded-full right-50 mt-100 absolute bg-paleta-konnectai-forth/10 blur-3xl ' />
+          <div className='hidden lg:flex w-10 h-10 rotate-45 left-170 mb-100 absolute bg-paleta-konnectai-forth/20 blur-xl ' />
+          <div className='flex flex-col relative items-center lg:items-start max-w-3xl gap-10'>
+            <div id='title' className='max-w-3xl'>
+              <h2 className='font-bold text-paleta-konnectai-primary'>Descomplique seu atendimento.</h2>
+              <h3 className='font-medium text-paleta-konnectai-primary'>Automatize suas vendas.</h3>
             </div>
-            <p className='text-lg max-w-lg text-paleta-konnectai-forth '>Transforme conversas em oportunidades com IA inteligente, integração total de canais e suporte humanizado.</p>
-            <a className='flex items-center gap-2 p-3 max-w-sm justify-center rounded-full degradeClaro text-paleta-konnectai-terciary font-medium'>
+            <p className='text-2xl text-paleta-konnectai-primary'>Transforme conversas em oportunidades com IA inteligente, integração total de canais e suporte humanizado.</p>
+            <a className='flex items-center gap-2 p-3 max-w-sm justify-center rounded-full degradeEscuro text-paleta-konnectai-terciary font-medium'>
               <FaWhatsapp className='shrink-0 w-4 h-4' />
               <span>Quero automatizar meu atendimento</span>
             </a>
           </div>
-          <div className='flex'>
-            <div className='flex flex-col'>
-              <Image src={'/1.png'} width={1000} height={1000} alt='um homem e uma mulher olhando fixamente para frente.' className='hidden lg:flex lg:w-180 max-w-180'></Image>
-            </div>
+          <div className='flex  w-200 h-150 bg-[url("/1.png")] bg-top bg-cover bg-no-repeat'>
+            {/* <Image src={'/1.png'} width={700} height={200} alt='um homem e uma mulher olhando fixamente para frente.' className='hidden lg:flex border-gray-800 bg-top contrast-90 brightness-90 rounded-4xl' /> */}
           </div>
         </div>
-        <div className='flex items-center py-10 justify-between h-auto container'>
+      </div>
+      <div className='flex flex-col justify-center items-center bg-paleta-konnectai-primary w-full h-auto p-10'>
+
+        <div className='flex items-center justify-between h-auto container'>
           <div className='hidden lg:flex'>
             <Image src={'/2.png'} width={1000} height={1000} alt='imagem de um celular com uma ideia de atendimento possível na Konnectai' ></Image>
           </div>
@@ -99,8 +102,10 @@ export default function Home() {
         </div>
         <div className='flex-flex-col container'>
           <div className='flex flex-col items-center py-10 h-auto '>
-            <div className='flex container justify-between'>
-              <Image src={'/14.png'} width={1000} height={1000} alt='moça segurando notebook quebrando a quarta parede' className='hidden relative lg:flex ' />
+            <div className='flex gap-2 w-full justify-between '>
+            <div className='hidden lg:flex bg-[url("/14.png")] w-200 bg-cover bg-no-repeat bg-top-right'>
+            </div>
+              {/* <Image src={} width={200} height={200} alt='moça segurando notebook quebrando a quarta parede' className='hidden relative lg:flex ' /> */}
               <div className='flex flex-col w-full gap-3'>
                 <h3 className='degradeTextoFundoEscuro font-medium text-center'>Porque escolher a Konnectaí</h3>
                 <div className='flex flex-col divide-y divide-paleta-konnectai-secondary '>
@@ -121,7 +126,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex w-full container justify-center py-10 items-center'>
-          <div className='flex flex-col lg:items-start items-center justify-center lg:text-start text-center max-w-lg gap-6'>
+          <div className='flex flex-col lg:items-start items-center justify-center lg:text-start text-center lg:max-w-lg gap-6'>
             <h2 className='degradeTextoFundoEscuro font-medium py-2'>Seja omnichannel</h2>
             <span className='text-xl text-paleta-konnectai-terciary'>Com as soluções da Konnectaí, seu negócio fica presente em todos os canais, 24 horas por dia, permitindo que seus clientes falem com você onde preferirem, a qualquer momento.</span>
             <span className='text-xl text-paleta-konnectai-terciary'>Como provedora oficial do Grupo Meta, garantimos segurança, estabilidade e qualidade nos atendimentos via WhatsApp, Instagram e Facebook  tudo integrado para oferecer uma experiência rápida, profissional e sem complicações.</span>
@@ -162,11 +167,9 @@ export default function Home() {
                 </div>
               ))}
             </div>
-
-            <a className='flex items-center justify-center rounded-full font-medium p-3 degradeClaro max-w-lg' href="#">
+            <a className='flex items-center justify-center rounded-full font-medium p-3 degradeClaro w-md' href="#">
               Começar agora
             </a>
-
           </div>
           <div>
             <Image src={'/16.png'} width={1000} height={1000} alt='casal olhando para a tela do celular' className='hidden lg:flex lg:w-180' />
@@ -223,8 +226,8 @@ export default function Home() {
             Fale com o nosso time
           </a>
           <div className='flex flex-col items-center gap-10'>
-            <h4 className='text-center'>Nossa API Oficial permite integrações rápidas com diversas ferramentas</h4>
-            <h2 className='font-medium max-w-2xl text-center'>Compatível com as Principais Plataformas do Mercado.</h2>
+            <h4 className='text-center text-paleta-konnectai-primary'>Nossa API Oficial permite integrações rápidas com diversas ferramentas</h4>
+            <h2 className='font-bold max-w-2xl text-center degradeTextoFundoClaro'>Compatível com as Principais Plataformas do Mercado.</h2>
             <div className='max-w-6xl flex flex-wrap items-center justify-center gap-2'>
               {listEmpresas2.map((item) => (
                 <div key={item.id} className='flex items-center justify-center w-55 h-35 rounded-xl bg-paleta-konnectai-secondary'>
@@ -279,7 +282,7 @@ export default function Home() {
             <h2 className='text-center'>Pronto para transformar sua comunicação?</h2>
             <FormCta></FormCta>
           </div>
-          <Image src={'/21.png'} width={900} height={900} alt='' className='hidden lg:flex'/>
+          <Image src={'/21.png'} width={600} height={600} alt='' className='hidden lg:flex' />
         </div>
       </div>
       <footer className='w-full h-auto bg-paleta-konnectai-forth'>
