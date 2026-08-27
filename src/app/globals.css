@@ -32,7 +32,7 @@ h5{
 }
 
 .degradeClaro{
-  @apply bg-linear-to-r from-paleta-konnectai-secondary to-paleta-konnectai-terciary 
+  @apply bg-linear-to-r from-paleta-konnectai-forth to-paleta-konnectai-secondary text-paleta-konnectai-primary 
 }
 .degradeEscuro{
   @apply bg-linear-to-r from-paleta-konnectai-primary to-paleta-konnectai-secondary 

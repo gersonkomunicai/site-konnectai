@@ -32,14 +32,14 @@ export default function Home() {
             <h1 className='text-paleta-konnectai-primary p-2 font-medium'>Transforme seu WhatsApp em um canal inteligente de vendas e atendimento.</h1>
             <div className='flex flex-col text-center justify-center items-center gap-5'>
               <p className='text-paleta-konnectai-primary text-lg'>A Konnectai Conversas usa IA treinada no seu negócio para responder, qualificar leads e organizar atendimentos automaticamente tudo via API Oficial do WhatsApp.</p>
-              <div className='flex max-w-sm gap-2'>
-                <div className='flex items-center text-md border border-paleta-konnectai-primary text-paleta-konnectai-primary justify-center gap-2 p-2 rounded-full w-50 max-w-xs'>
+              <div className='lg:flex flex-col items-center w-full gap-2'>
+                <a href='#' className='flex items-center lg:mb-0 mb-5 text-md text-paleta-konnectai-terciary justify-center gap-2 p-2 rounded-full min-w-sm bg-paleta-konnectai-primary'>
                   <FaWhatsapp className='shrink-0 w-4 h-4' />
-                  <span>Fale Conosco</span>
-                </div>
-                <div className='flex items-center justify-center text-md text-paleta-konnectai-primary gap-2 p-2 border border-paleta-konnectai-primary rounded-full w-50 max-w-xs'>
+                  <span className='font-medium'>Fale Conosco</span>
+                </a>
+                <a href='#title' className='flex items-center justify-center text-md gap-2 p-2 bg-paleta-konnectai-primary text-paleta-konnectai-terciary font-medium rounded-full min-w-sm'>
                   <span>Ver como funciona</span>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -49,11 +49,11 @@ export default function Home() {
         <div className='flex container items-center justify-center lg:text-left text-center lg:justify-between'>
           <div className='flex flex-col items-center lg:items-start max-w-3xl gap-10'>
             <div id='title'>
-              <h2>Descomplique seu atendimento.</h2>
-              <h3>Automatize suas vendas.</h3>
+              <h2 className='font-bold text-paleta-konnectai-terciary'>Descomplique seu atendimento.</h2>
+              <h3 className='font-medium text-paleta-konnectai-forth'>Automatize suas vendas.</h3>
             </div>
-            <p className='text-lg max-w-lg'>Transforme conversas em oportunidades com IA inteligente, integração total de canais e suporte humanizado.</p>
-            <a className='flex items-center gap-2 p-3 max-w-sm justify-center rounded-full bg-paleta-konnectai-primary text-paleta-konnectai-terciary font-medium'>
+            <p className='text-lg max-w-lg text-paleta-konnectai-forth '>Transforme conversas em oportunidades com IA inteligente, integração total de canais e suporte humanizado.</p>
+            <a className='flex items-center gap-2 p-3 max-w-sm justify-center rounded-full degradeClaro text-paleta-konnectai-terciary font-medium'>
               <FaWhatsapp className='shrink-0 w-4 h-4' />
               <span>Quero automatizar meu atendimento</span>
             </a>
@@ -64,7 +64,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='flex items-center py-10 justify-between h-auto container '>
+        <div className='flex items-center py-10 justify-between h-auto container'>
           <div className='hidden lg:flex'>
             <Image src={'/2.png'} width={1000} height={1000} alt='imagem de um celular com uma ideia de atendimento possível na Konnectai' ></Image>
           </div>
@@ -81,7 +81,7 @@ export default function Home() {
                 </div>
               ))}
               <div className='w-full flex justify-center'>
-                <a href="" className='mt-6 rounded-full flex p-5 bg-linear-to-r font-medium text-paleta-konnectai-primary from-paleta-konnectai-secondary to-paleta-konnectai-terciary text-lg justify-center items-center'>Converse com um especialista</a>
+                <a href="" className='mt-6 rounded-full flex p-5 degradeClaro font-medium text-paleta-konnectai-primary from-paleta-konnectai-secondary to-paleta-konnectai-terciary text-lg justify-center items-center'>Converse com um especialista</a>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@ export default function Home() {
                     </div>
                   ))}
                   <div className='p-3 mt-10 w-full text-center flex justify-center'>
-                    <a href='' className='p-3 font-medium text-lg bg-linear-to-r rounded-full from-paleta-konnectai-secondary to-paleta-konnectai-terciary'>
+                    <a href='' className='p-3 font-medium text-lg  rounded-full degradeClaro'>
                       Quero falar com um especialista
                     </a>
                   </div>
@@ -163,7 +163,7 @@ export default function Home() {
               ))}
             </div>
 
-            <a className='flex items-center justify-center rounded-full font-medium p-3 bg-linear-to-r from-paleta-konnectai-secondary to-paleta-konnectai-terciary max-w-lg' href="#">
+            <a className='flex items-center justify-center rounded-full font-medium p-3 degradeClaro max-w-lg' href="#">
               Começar agora
             </a>
 
@@ -241,7 +241,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex flex-col py-18'>
-          <div className='flex gap-6 flex-wrap'>
+          <div className='flex justify-center gap-6 flex-wrap'>
             <div className=' degradeTextoFundoEscuro flex flex-col max-w-sm items-center text-center'>
               <h1>95%</h1>
               <h5>Satisfação dos Clientes</h5>
