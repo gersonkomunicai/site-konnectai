@@ -9,6 +9,7 @@
   --color-paleta-konnectai-forth: oklch(0.9502 0.0819 151.1);
 }
 
+
 h1{
   @apply text-6xl font-bold
 }
@@ -35,7 +36,7 @@ h5{
   @apply bg-linear-to-r from-paleta-konnectai-forth to-paleta-konnectai-secondary font-medium text-paleta-konnectai-primary 
 }
 .degradeEscuro{
-  @apply bg-linear-to-r from-paleta-konnectai-primary to-paleta-konnectai-secondary 
+  @apply bg-linear-to-r from-paleta-konnectai-primary to-paleta-konnectai-secondary text-paleta-konnectai-terciary font-medium
 }
 
 .navbarHover{
