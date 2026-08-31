@@ -24,8 +24,8 @@ export default function Home() {
       <Navbar className='absolute top-0 border-b border-paleta-konnectai-terciary' />
       <div className='w-full bg-[url("/hero2.png")] bg-cover bg-no-repeat bg-center'>
         <div className='bg-paleta-konnectai-primary' />
-        <div className='flex flex-col justify-center items-center w-full h-screen '>
-          <div className='h-full container flex flex-col justify-center items-center text-center gap-10 '>
+        <div className='flex flex-col justify-center items-center w-full md:h-screen h-auto lg:py-0 py-30 '>
+          <div className='h-full container flex flex-col justify-center items-center  text-center gap-10 '>
             <h1 className='text-paleta-konnectai-terciary p-2 font-medium'>Transforme seu WhatsApp em um canal inteligente de vendas e atendimento.</h1>
             <div className='flex flex-col text-center justify-center items-center gap-5'>
               <p className='text-paleta-konnectai-forth text-lg'>A Konnectai Conversas usa IA treinada no seu negócio para responder, qualificar leads e organizar atendimentos automaticamente tudo via API Oficial do WhatsApp.</p>
@@ -43,7 +43,7 @@ export default function Home() {
         </div>
       </div>
       <div className='bg-paleta-konnectai-primary' />
-      <div className='w-full flex items-center justify-center bg-paleta-konnectai-terciary'>
+      <div className='w-full flex items-center justify-center py-10 bg-paleta-konnectai-terciary'>
         <div className='flex container items-center justify-center lg:text-left text-center lg:justify-between'>
           <div className='w-96 h-96 rounded-full absolute mt-60 left-10 bg-paleta-konnectai-forth/15 blur-3xl' />
           <div className='hidden lg:flex w-20 h-20 mt-10 left-200 rotate-45 absolute bg-paleta-konnectai-forth/20 blur-3xl ' />
@@ -60,7 +60,7 @@ export default function Home() {
               <span>Quero automatizar meu atendimento</span>
             </a>
           </div>
-          <div className='flex  w-200 h-150 bg-[url("/1.png")] bg-top bg-cover bg-no-repeat'>
+          <div className='hidden lg:flex w-200 h-150 bg-[url("/1.png")] bg-top bg-cover bg-no-repeat'>
             {/* <Image src={'/1.png'} width={700} height={200} alt='um homem e uma mulher olhando fixamente para frente.' className='hidden lg:flex border-gray-800 bg-top contrast-90 brightness-90 rounded-4xl' /> */}
           </div>
         </div>
