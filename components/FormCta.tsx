@@ -6,12 +6,16 @@ import { ImOffice } from "react-icons/im";
 import { LuUser } from "react-icons/lu";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 
+interface FormCtaProps {
+    className?: string
+}
 
-export default function FormCta() {
+
+export default function FormCta({className}: FormCtaProps) {
     const [site, setSite] = useState(false)
 
     return (
-        <div className='flex gap-3 flex-col border border-paleta-konnectai-terciary rounded-xl p-3'>
+        <div className={`flex gap-3 flex-col border ${className} rounded-xl p-3`}>
             <h4>Junte-se a nós e transforme sua comunicação!</h4>
             <label>Nome*</label>
             <div className='border flex items-center text-paleta-konnectai-terciary p-2 gap-2'>

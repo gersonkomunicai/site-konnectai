@@ -22,7 +22,7 @@ export default function Navbar({ className }: NavbarProps) {
                 <div className='w-3xl p-3 flex justify-between text-paleta-konnectai-terciary font-medium text-lg '>
                     <a href="/produtos" className='navbarHover'>Produtos</a>
                     <a href="/canais" className='navbarHover'>Canais</a>
-                    <a href="" className='navbarHover '>Quem somos</a>
+                    <a href="/quem-somos" className='navbarHover'>Quem somos</a>
                     <a href="" className='navbarHover'>Blog</a>
                     <a href="" className='navbarHover'>Contato</a>
                     <a href="" className='navbarHover'>Fale com um especialista</a>

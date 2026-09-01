@@ -42,3 +42,7 @@ h5{
 .navbarHover{
   @apply hover:text-paleta-konnectai-secondary transition-all ease-in duration-200
 }
+
+.pageDegradeEscuro{
+  @apply bg-linear-to-r from-paleta-konnectai-primary via-black to-paleta-konnectai-primary
+}
