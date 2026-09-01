@@ -24,7 +24,7 @@ export default function Navbar({ className }: NavbarProps) {
                     <a href="/canais" className='navbarHover'>Canais</a>
                     <a href="/quem-somos" className='navbarHover'>Quem somos</a>
                     <a href="" className='navbarHover'>Blog</a>
-                    <a href="" className='navbarHover'>Contato</a>
+                    <a href="/contato" className='navbarHover'>Contato</a>
                     <a href="" className='navbarHover'>Fale com um especialista</a>
                 </div>
             </div>
