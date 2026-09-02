@@ -4,21 +4,23 @@ import { BsInstagram, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import { FaWpforms } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { BiPhone } from "react-icons/bi";
+import FormCta from "../../../components/FormCta";
+import Footer from "../../../components/Footer";
 
 export default function ContatoPage() {
     return (
         <div>
-            <Navbar className="absolute top-0 border-b border-paleta-konnectai-terciary" />
+            <Navbar className="top-0 border-b border-paleta-konnectai-terciary" />
             <main>
-                <section id="1" className="flex justify-center bg-[url('/hero3.png')] h-screen">
+                <section id="1" className="flex justify-center bg-[url('/hero3.png')] bg-cover bg-no-repeat bg-center h-screen">
                     <div className="flex container items-center justify-center">
-                        <div className="flex flex-col items-center max-w-5xl gap-3">
-                            <p className="uppercase text-xl text-paleta-konnectai-terciary">CONTATO KONNECTAÍ</p>
+                        <div className="flex flex-col items-center max-w-4xl gap-3">
+                            <p className="uppercase text-lg text-paleta-konnectai-terciary">CONTATO KONNECTAÍ</p>
                             <h1 className="degradeTextoFundoEscuro text-center">Vamos Conversar?</h1>
-                            <p className="text-paleta-konnectai-terciary text-lg max-w-md text-center">Estamos prontos para entender seu desafio e transformar sua comunicação em performance.</p>
+                            <p className="text-paleta-konnectai-terciary text-xl text-center">Estamos prontos para entender seu desafio e transformar sua comunicação em performance.</p>
                             <div className="flex gap-2">
-                                <a href="" className="p-3 rounded-full degradeClaro">Fale Conosco</a>
-                                <a href="" className="p-3 rounded-full degradeClaro">Teste nosso Chatbot em seu Whatsapp</a>
+                                <a href="#5" className="p-3 rounded-full degradeClaro">Fale Conosco</a>
+                                <a href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target="_blank" className="p-3 rounded-full degradeClaro">Teste nosso Chatbot em seu Whatsapp</a>
                             </div>
                         </div>
                     </div>
@@ -45,50 +47,71 @@ export default function ContatoPage() {
                         </div>
                     </div>
                 </section>
-                <section className="flex justify-center pageDegradeEscuro lg:h-180 h-auto lg:py-0 py-15">
+                <section id='4' className="flex justify-center pageDegradeEscuro lg:h-180 h-auto lg:py-0 py-15">
                     <div className="flex container justify-center items-end">
-                        <div className="flex flex-col w-4xl border border-paleta-konnectai-terciary lg:text-start text-center gap-3 pb-20">
+                        <div className="flex flex-col w-4xl  lg:text-start text-center gap-3 pb-20">
                             <h3 className="degradeTextoFundoEscuro py-2 font-bold">Nossos canais de atendimento</h3>
                             <h5 className="text-paleta-konnectai-forth">Você pode entrar em contato pelos seguintes meios</h5>
                             <div className="grid gap-3">
                                 <div className="grid grid-cols-2 gap-3">
                                     <div className="flex items-center gap-2 p-3 justify-center rounded-full degradeClaro">
-                                        <BsWhatsapp className="shrink-0 w-4 h-4 "/>
+                                        <BsWhatsapp className="shrink-0 w-4 h-4 " />
                                         <p>Whatsapp</p>
                                     </div>
                                     <div className="flex items-center gap-2 p-3 justify-center rounded-full degradeClaro">
-                                        <BsInstagram className="shrink-0 w-4 h-4 "/>
+                                        <BsInstagram className="shrink-0 w-4 h-4 " />
                                         <p>Instagram</p>
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-2 gap-3">
                                     <div className="flex items-center gap-2 p-3 justify-center rounded-full degradeClaro">
-                                        <FaWpforms className="shrink-0 w-4 h-4 "/>
+                                        <FaWpforms className="shrink-0 w-4 h-4 " />
                                         <p>Formulário</p>
                                     </div>
                                     <div className="flex items-center gap-2 p-3 justify-center rounded-full degradeClaro">
-                                        <MdEmail className="shrink-0 w-4 h-4 "/>
+                                        <MdEmail className="shrink-0 w-4 h-4 " />
                                         <p>Email</p>
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-2 gap-3">
                                     <div className="flex items-center gap-2 p-3 justify-center rounded-full degradeClaro">
-                                        <BsLinkedin className="shrink-0 w-4 h-4 "/>
+                                        <BsLinkedin className="shrink-0 w-4 h-4 " />
                                         <p>Linkedin</p>
                                     </div>
                                     <div className="flex items-center gap-2 p-3 justify-center rounded-full degradeClaro">
-                                        <BiPhone className="shrink-0 w-4 h-4 "/>
+                                        <BiPhone className="shrink-0 w-4 h-4 " />
                                         <p>Telefone</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-[url('/contato/modelo2.png')] bg-cover bg-center bg-no-repeat h-120 w-80">
-
+                        <div className="bg-[url('/contato/modelo2.png')] bg-cover bg-center bg-no-repeat h-120 w-96" />
+                    </div>
+                </section>
+                <section id="5" className="flex justify-center pageDegradeClaro lg:h-180 h-auto lg:py-0 py-15">
+                    <div className="flex container justify-center items-end gap-5">
+                        <div className="flex flex-col w-2xl lg:text-start text-center gap-3 pb-10">
+                            <FormCta className="bg-paleta-konnectai-primary text-paleta-konnectai-terciary"></FormCta>
+                        </div>
+                        <div className="bg-[url('/contato/modelo3.png')] bg-cover bg-center bg-no-repeat h-170 w-120" />
+                    </div>
+                </section>
+                <section id="6" className="flex justify-center pageDegradeEscuro h-100 ">
+                    <div className="flex container justify-center items-center text-center">
+                        <div className="flex flex-col max-w-xl gap-5">
+                            <h3 className="font-bold degradeTextoFundoEscuro">Quer acelerar ainda mais?</h3>
+                            <h5 className="font-medium text-paleta-konnectai-terciary">Agende uma demonstração personalizada</h5>
+                            <p className="text-lg text-paleta-konnectai-terciary">Veja na prática como nossa solução organiza seus canais, automatiza processos e aumenta a produtividade da sua equipe.</p>
+                            <a href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target="_blank" className="p-3 rounded-full degradeClaro">
+                                Agendar Demonstração
+                            </a>
                         </div>
                     </div>
                 </section>
             </main>
+            <footer className="bg-paleta-konnectai-forth">
+                <Footer/>
+            </footer>
         </div>
     )
 }

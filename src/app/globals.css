@@ -46,3 +46,6 @@ h5{
 .pageDegradeEscuro{
   @apply bg-linear-to-r from-paleta-konnectai-primary via-black to-paleta-konnectai-primary
 }
+.pageDegradeClaro{
+  @apply bg-linear-to-r from-gray-100 via-gray-300 to-gray-100
+}

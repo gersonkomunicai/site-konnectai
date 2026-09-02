@@ -21,7 +21,7 @@ import Footer from '../../components/Footer'
 export default function Home() {
   return (
     <div className='flex flex-col justify-center items-center'>
-      <Navbar className='absolute top-0 border-b border-paleta-konnectai-terciary' />
+      <Navbar className='fixed top-0 border-b border-paleta-konnectai-terciary' />
       <div className='w-full bg-[url("/hero2.png")] bg-cover bg-no-repeat bg-center'>
         <div className='bg-paleta-konnectai-primary' />
         <div className='flex flex-col justify-center items-center w-full md:h-screen h-auto lg:py-0 py-30 '>
@@ -30,7 +30,7 @@ export default function Home() {
             <div className='flex flex-col text-center justify-center items-center gap-5'>
               <p className='text-paleta-konnectai-forth text-lg'>A Konnectai Conversas usa IA treinada no seu negócio para responder, qualificar leads e organizar atendimentos automaticamente tudo via API Oficial do WhatsApp.</p>
               <div className='lg:flex flex-col items-center w-full gap-2'>
-                <a href='#' className='flex items-center lg:mb-0 mb-5 text-md text-paleta-konnectai-primary justify-center gap-2 p-2 rounded-full min-w-sm bg-paleta-konnectai-forth'>
+                <a href='https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0' target="_blank" className='flex items-center lg:mb-0 mb-5 text-md text-paleta-konnectai-primary justify-center gap-2 p-2 rounded-full min-w-sm bg-paleta-konnectai-forth'>
                   <FaWhatsapp className='shrink-0 w-4 h-4' />
                   <span className='font-medium'>Fale Conosco</span>
                 </a>
@@ -84,7 +84,7 @@ export default function Home() {
                 </div>
               ))}
               <div className='w-full flex justify-center'>
-                <a href="" className='mt-6 rounded-full flex p-5 degradeClaro font-medium text-paleta-konnectai-primary from-paleta-konnectai-secondary to-paleta-konnectai-terciary text-lg justify-center items-center'>Converse com um especialista</a>
+                <a href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target='_blank' className='mt-6 rounded-full flex p-5 degradeClaro font-medium text-paleta-konnectai-primary from-paleta-konnectai-secondary to-paleta-konnectai-terciary text-lg justify-center items-center'>Converse com um especialista</a>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function Home() {
                     </div>
                   ))}
                   <div className='p-3 mt-10 w-full text-center flex justify-center'>
-                    <a href='' className='p-3 font-medium text-lg  rounded-full degradeClaro'>
+                    <a href='https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0' target='_blank' className='p-3 font-medium text-lg  rounded-full degradeClaro'>
                       Quero falar com um especialista
                     </a>
                   </div>
@@ -130,7 +130,7 @@ export default function Home() {
             <h2 className='degradeTextoFundoEscuro font-medium py-2'>Seja omnichannel</h2>
             <span className='text-xl text-paleta-konnectai-terciary'>Com as soluções da Konnectaí, seu negócio fica presente em todos os canais, 24 horas por dia, permitindo que seus clientes falem com você onde preferirem, a qualquer momento.</span>
             <span className='text-xl text-paleta-konnectai-terciary'>Como provedora oficial do Grupo Meta, garantimos segurança, estabilidade e qualidade nos atendimentos via WhatsApp, Instagram e Facebook  tudo integrado para oferecer uma experiência rápida, profissional e sem complicações.</span>
-            <a href="" className='flex justify-center rounded-full text-lg font-medium degradeClaro w-full lg:max-w-xs p-3'>Fale Conosco</a>
+            <a href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target='_blank' className='flex justify-center rounded-full text-lg font-medium degradeClaro w-full lg:max-w-xs p-3'>Fale Conosco</a>
           </div>
           <div className='hidden lg:flex'>
             <Image src={'/15.png'} width={1000} height={1000} alt='' className='w-200' />
@@ -167,7 +167,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <a className='flex items-center justify-center rounded-full font-medium p-3 degradeClaro w-md' href="#">
+            <a className='flex items-center justify-center rounded-full font-medium p-3 degradeClaro w-md' href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target='_blank'>
               Começar agora
             </a>
           </div>
@@ -194,7 +194,7 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-                <a href="" className='flex items-center justify-between gap-3 bg-paleta-konnectai-secondary/80 border rounded-xl border-paleta-konnectai-secondary shadow-xl/30 shadow-paleta-konnectai-secondary p-2'>
+                <a href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target='_blank' className='flex items-center justify-between gap-3 bg-paleta-konnectai-secondary/80 border rounded-xl border-paleta-konnectai-secondary shadow-xl/30 shadow-paleta-konnectai-secondary p-2'>
                   <div className='flex items-center gap-3'>
                     <PiHeadsetLight className='shrink-0 w-15 h-15 bg-linear-to-b from-paleta-konnectai-terciary rounded-md to-paleta-konnectai-secondary/50 p-2 text-paleta-konnectai-primary' />
                     <div className='flex text-paleta-konnectai-terciary flex-col'>
@@ -222,7 +222,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <a href="" className='flex justify-center p-3 text-lg font-medium text-paleta-konnectai-terciary degradeEscuro w-sm rounded-full'>
+          <a href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target='_blank' className='flex justify-center p-3 text-lg font-medium text-paleta-konnectai-terciary degradeEscuro w-sm rounded-full'>
             Fale com o nosso time
           </a>
           <div className='flex flex-col items-center gap-10'>
@@ -235,12 +235,12 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <a href="" className='flex items-center justify-center rounded-full font-medium text-lg text-paleta-konnectai-terciary w-md p-3 degradeEscuro'>Conectar meus canais</a>
+            <a href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target='_blank' className='flex items-center justify-center rounded-full font-medium text-lg text-paleta-konnectai-terciary w-md p-3 degradeEscuro'>Conectar meus canais</a>
           </div>
           <div className='flex flex-col items-center text-center gap-5 lg:py-20'>
             <h2 className='degradeTextoFundoClaro font-bold'>Benefícios da Konnectaí</h2>
             <CardBeneficios />
-            <a href="" className='flex w-sm p-3 items-center justify-center text-paleta-konnectai-terciary text-xl degradeEscuro rounded-full'>Falar com um especialista</a>
+            <a href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target='_blank' className='flex w-sm p-3 items-center justify-center text-paleta-konnectai-terciary text-xl degradeEscuro rounded-full'>Falar com um especialista</a>
           </div>
         </div>
         <div className='flex flex-col py-18'>

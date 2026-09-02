@@ -13,15 +13,15 @@ export default function CanaisPage() {
     return (
         <div className="flex flex-col">
             <main className="h-auto">
-                <Navbar className="absolute top-0 border-b border-paleta-konnectai-terciary" />
+                <Navbar className="top-0 border-b border-paleta-konnectai-terciary" />
                 <section id="1" className="flex items-center justify-center bg-[url('/hero3.png')] bg-center bg-cover bg-no-repeat min-h-screen">
                     <div className="flex container justify-center text-paleta-konnectai-terciary">
                         <div className="flex flex-col items-center gap-2 h-full justify-center lg:py-0 py-30 ">
-                            <p className="uppercase text-xl">Canais da Konnectaí</p>
-                            <h1 className="degradeTextoFundoEscuro p-2 font-bold text-center max-w-2xl">Todos os canais.</h1>
-                            <h1 className="degradeTextoFundoEscuro p-2 font-bold text-center max-w-2xl">Uma única experiência.</h1>
-                            <p className="text-lg text-paleta-konnectai-terciary text-center">Centralize, organize e potencialize cada conversa  onde quer que seu cliente esteja.</p>
-                            <a className="flex items-center gap-2 p-3 w-md justify-center rounded-full degradeClaro" href="">
+                            <p className="uppercase text-lg">Canais da Konnectaí</p>
+                            <h1 className="degradeTextoFundoEscuro  font-bold text-center max-w-2xl">Todos os canais.</h1>
+                            <h1 className="degradeTextoFundoEscuro  font-bold text-center max-w-2xl">Uma única experiência.</h1>
+                            <p className="text-xl text-paleta-konnectai-terciary text-center">Centralize, organize e potencialize cada conversa  onde quer que seu cliente esteja.</p>
+                            <a className="flex items-center gap-2 p-3 w-md justify-center rounded-full degradeClaro" href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target="_blank">
                                 <BsWhatsapp className="shrink-0 w-4 h-4 " />
                                 <span>Fale Conosco</span>
                             </a>
@@ -51,7 +51,7 @@ export default function CanaisPage() {
                                     </div>
                                 ))}
                             </div>
-                            <a href="" className="flex p-3 my-10 degradeClaro rounded-full items-center justify-center">Conectar meus canais</a>
+                            <a href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target="_blank" className="flex p-3 my-10 degradeClaro rounded-full items-center justify-center">Conectar meus canais</a>
                         </div>
                         <div className="flex flex-col gap-6">
                             <div className="grid gap-5 justify-items-center">
@@ -169,7 +169,7 @@ export default function CanaisPage() {
                             <h2 className="degradeTextoFundoEscuro py-2 font-bold">O impacto real dos canais integrados</h2>
                             <span className="text-lg text-paleta-konnectai-terciary">Centralizar não é apenas organizar é transformar comunicação em inteligência estratégica. Cada interação vira dado, cada canal vira oportunidade.</span>
                             <h4 className="text-paleta-konnectai-terciary">Centralize seus canais agora</h4>
-                            <a href="" className="p-3 rounded-full degradeClaro">
+                            <a href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target="_blank" className="p-3 rounded-full degradeClaro">
                                 Solicitar Demonstração
                             </a>
                         </div>

@@ -1,19 +1,41 @@
 'use client'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { LuMenu } from 'react-icons/lu'
 
 interface NavbarProps {
     className?: string
 }
 
+function useScrollDirection() {
+    const [visible, setVisible] = useState(true)
+    const lastPosition = useRef(0)
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY
+            if (lastPosition.current > currentScrollY) {
+                setVisible(true)
+                lastPosition.current = currentScrollY
+            }
+            if (lastPosition.current < currentScrollY) {
+                setVisible(false)
+                lastPosition.current = currentScrollY
+            }
+        }
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+
+    }, [])
+    return visible
+}
 
 export default function Navbar({ className }: NavbarProps) {
     const [toggle, setToggle] = useState(false)
+    const visible = useScrollDirection()
     return (
         <div className="flex w-screen items-center justify-center top-0">
-            <div className={`hidden lg:flex container items-center justify-between lg:p-4 h-25 ${className}`}>
+            <div className={`hidden lg:flex fixed ${visible ? 'transition-transform translate-y-0 bg-paleta-konnectai-primary/80' : 'transition-transform -translate-y-full'} container items-center justify-between lg:p-4 h-25 ${className}`}>
                 <div>
                     <a href="/">
                         <Image className='w-60' src={'/konnectai_logo_verde.png'} width={1000} height={100} alt='logo konnectai'></Image>
@@ -23,9 +45,9 @@ export default function Navbar({ className }: NavbarProps) {
                     <a href="/produtos" className='navbarHover'>Produtos</a>
                     <a href="/canais" className='navbarHover'>Canais</a>
                     <a href="/quem-somos" className='navbarHover'>Quem somos</a>
-                    <a href="" className='navbarHover'>Blog</a>
+                    {/* <a href="" className='navbarHover'>Blog</a> */}
                     <a href="/contato" className='navbarHover'>Contato</a>
-                    <a href="" className='navbarHover'>Fale com um especialista</a>
+                    <a href="/fale-conosco" className='navbarHover'>Fale com um especialista</a>
                 </div>
             </div>
             <div className={`lg:hidden flex container absolute left-0 md:left-auto items-center justify-between p-4 h-25 ${className}`}>
@@ -39,9 +61,9 @@ export default function Navbar({ className }: NavbarProps) {
                     <a href="/produtos" className='navbarHover'>Produtos</a>
                     <a href="/canais" className='navbarHover'>Canais</a>
                     <a href="/quem-somos" className='navbarHover'>Quem somos</a>
-                    <a href="" className='navbarHover'>Blog</a>
-                    <a href="" className='navbarHover'>Contato</a>
-                    <a href="" className='navbarHover'>Fale com um especialista</a>
+                    {/* <a href="" className='navbarHover'>Blog</a> */}
+                    <a href="/contato" className='navbarHover'>Contato</a>
+                    <a href="/fale-conosco" className='navbarHover'>Fale com um especialista</a>
                 </div>}
         </div>
     )

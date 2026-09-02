@@ -9,11 +9,11 @@ export default function QuemSomosPage() {
     return (
         <div>
             <main>
-                <Navbar className="absolute top-0 border-b border-paleta-konnectai-terciary" />
+                <Navbar className="top-0 border-b border-paleta-konnectai-terciary" />
                 <div className="flex flex-col">
                     <section id="1" className="flex items-center justify-center bg-[url('/hero3.png')] bg-center bg-cover bg-no-repeat h-screen">
-                        <div className="flex flex-col container items-center justify-between max-w-5xl text-center">
-                            <h3 className="font-medium degradeTextoFundoEscuro">Sobre a Konnectaí</h3>
+                        <div className="flex flex-col container items-center justify-between max-w-4xl text-center">
+                            <p className="text-lg uppercase text-paleta-konnectai-terciary">Sobre a Konnectaí</p>
                             <h1 className="degradeTextoFundoEscuro py-2">Conectando empresas ao futuro da comunicação</h1>
                             <p className="text-xl  text-paleta-konnectai-terciary">Tecnologia, estratégia e inteligência para transformar a forma como negócios se comunicam.</p>
                         </div>
@@ -53,7 +53,7 @@ export default function QuemSomosPage() {
                                 <h3 className="degradeTextoFundoEscuro font-bold">Nosso Diferencial</h3>
                                 <h5 className="degradeTextoFundoEscuro">Não entregamos ferramentas. Entregamos estrutura.</h5>
                                 <p className="text-lg text-paleta-konnectai-terciary">Cada solução é pensada para se adaptar à realidade do negócio, respeitando processos, metas e ritmo de crescimento. Nosso foco não é apenas tecnologia é resultado operacional.</p>
-                                <div className="flex flex-col gap-5">
+                                <div className="flex flex-col gap-5 lg:items-start items-center">
                                     {listDiferenciais.map((item) => (
                                         <div key={item.id} className="flex items-center gap-2">
                                             <GiCheckMark className="text-paleta-konnectai-secondary" />
@@ -98,17 +98,17 @@ export default function QuemSomosPage() {
                                 <h5 className="text-paleta-konnectai-primary">Transformamos comunicação em vantagem competitiva.</h5>
                                 <p className="text-lg">Empresas que utilizam nossas soluções ganham previsibilidade operacional, produtividade de equipe e melhor experiência do cliente criando um ciclo sustentável de crescimento.</p>
                                 <h5 className="text-paleta-konnectai-primary">Conheça nossas soluções</h5>
-                                <a className="p-3 text-lg rounded-full degradeEscuro" href="">Fale Conosco</a>
+                                <a className="p-3 text-lg rounded-full degradeEscuro" href="https://api.whatsapp.com/send/?phone=558491849939&text&type=phone_number&app_absent=0" target="_blank">Fale Conosco</a>
                             </div>
                         </div>
                     </section>
                     <section id="9" className="flex justify-center pageDegradeEscuro h-200">
                         <div className="flex container justify-between items-end">
                             <div className="flex flex-col max-w-2xl pb-10 gap-5">
-                                <h2 className="degradeTextoFundoEscuro py-2 font-bold">Converse com um especialista</h2>
+                                <h2 className="degradeTextoFundoEscuro lg:text-start text-center py-2 font-bold">Converse com um especialista</h2>
                                 <FormCta className="text-paleta-konnectai-terciary"></FormCta>
                             </div>
-                            <div className="w-150 h-180 flex- bg-[url('/quem-somos/modelo2.png')] bg-cover bg-center bg-no-repeat" />
+                            <div className="w-150 h-180 hidden lg:flex bg-[url('/quem-somos/modelo2.png')] bg-cover bg-center bg-no-repeat" />
                         </div>
                     </section>
                 </div>
