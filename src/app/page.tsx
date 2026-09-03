@@ -21,7 +21,7 @@ import Footer from '../../components/Footer'
 export default function Home() {
   return (
     <div className='flex flex-col justify-center items-center'>
-      <Navbar className='fixed top-0 border-b border-paleta-konnectai-terciary' />
+      <Navbar className='top-0 border-b border-paleta-konnectai-terciary' />
       <div className='w-full bg-[url("/hero2.png")] bg-cover bg-no-repeat bg-center'>
         <div className='bg-paleta-konnectai-primary' />
         <div className='flex flex-col justify-center items-center w-full md:h-screen h-auto lg:py-0 py-30 '>
