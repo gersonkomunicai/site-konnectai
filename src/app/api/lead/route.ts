@@ -2,6 +2,15 @@ import { leadSchema } from "@/lib/lead-schema"
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
 
+function htmlEscape(text: string){
+    return text
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
 export async function POST(request: Request) {
     const body = await request.json()
     const result = leadSchema.safeParse(body)
@@ -12,9 +21,10 @@ export async function POST(request: Request) {
                 from: 'no-reply@konnectai.com.br',
                 to: "gersonrgj2@gmail.com",
                 subject: 'Lead Cadastrado',
-                html: `Seguem as informações de lead cadastrado pelo formulário:\n 
-                        Nome: ${result.data.name}, Email: ${result.data.email},\n 
-                        Empresa: ${result.data.enterprise}, Celular: ${result.data.phone}`,
+            html: `<img src="https://www.konnectai.com.br/Iso.png" alt="Logo da Konnectai" width="50" height"50"/><br/>
+                        <h2>Seguem as informações de lead cadastrado pelo formulário:</h2><br/> 
+                        <p>Nome: <strong>${htmlEscape(result.data.name)}</strong> <br/>Email: <strong>${htmlEscape(result.data.email)}</strong><br/> 
+                        Empresa: <strong>${htmlEscape(result.data.enterprise)}</strong> <br/>Celular: <strong>${htmlEscape(result.data.phone)}</strong></p>`,
             });
             if(error){
                 console.error(error)
