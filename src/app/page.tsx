@@ -288,7 +288,7 @@ export default function Home() {
           <Image src={'/21.png'} width={600} height={600} alt='' className='hidden lg:flex' />
         </div>
       </div>
-      <footer className='w-full h-auto bg-paleta-konnectai-forth'>
+      <footer className='w-full bg-paleta-konnectai-forth'>
         <Footer />
       </footer>
     </div>
