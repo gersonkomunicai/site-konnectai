@@ -22,6 +22,9 @@ export default function Home() {
   return (
     <div className='flex flex-col justify-center items-center'>
       <Navbar className='top-0 border-b border-paleta-konnectai-terciary' />
+      <a href={`https://wa.me/558491849939?text=Quero%20mais%20informações%20sobre%20o%20Correio%20Inteligente.`} target="_blank" >
+            <Image width={1000} height={1000} src="/whatsapp.png" className="fixed w-10 md:fixed bottom-10 right-10 md:w-15" alt="" />
+          </a>
       <div className='w-full bg-[url("/hero2.png")] bg-cover bg-no-repeat bg-center'>
         <div className='bg-paleta-konnectai-primary' />
         <div className='flex flex-col justify-center items-center w-full md:h-screen h-auto lg:py-0 py-30 '>
