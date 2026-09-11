@@ -20,10 +20,13 @@ export default function Footer() {
                 </div>
                 <div className="lg:flex lg:text-start text-center lg:h-50">
                     <div className="flex flex-col gap-2 lg:max-w-xs text-lg text-paleta-konnectai-primary">
-                        <p className="font-medium">Contato</p>
-                        <span>Rua Coronel Del Prett, 72, CEP 59.584-000, Centro - Touros/RN</span>
-                        <span>contato@konnectai.com.br</span>
-                        <span>(84) 99184-9939</span>
+                        <p className="font-bold">Endereço</p>
+                        <p className="">Rua Coronel Del Prett, 72, CEP 59.584-000, Centro - Touros/RN</p>
+                        <p className="font-bold">Contato</p>
+                        <a href="mailto:contato@konnectai.com.br" className="">contato@konnectai.com.br</a>
+                        <p className="">{`(84) 99184-9939`}</p>
+                        <p className="font-bold">CNPJ</p>
+                        <p className="">60.908.950/0001-40</p>
                     </div>
                     <div className="flex flex-col gap-2 lg:max-w-xs text-lg text-paleta-konnectai-primary">
                         <p className="font-medium">Redes Sociais</p>
