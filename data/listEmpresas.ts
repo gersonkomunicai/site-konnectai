@@ -25,7 +25,7 @@ export const listEmpresa : ListEmpresa[] = [
         size:100
     },
     {
-        id: 4,
+        id: 17,
         image: "luza",
         nameEmpresa: "Luza Joias Conteporaneas",
         size:100
@@ -103,7 +103,7 @@ export const listEmpresa : ListEmpresa[] = [
         size:100
     },
     {
-        id: 17,
+        id: 4,
         image: "belinnatti",
         nameEmpresa: "Bellinatti Perez",
         size:100
